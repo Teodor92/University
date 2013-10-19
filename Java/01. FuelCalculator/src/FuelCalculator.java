@@ -8,7 +8,6 @@ public class FuelCalculator {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        final int FuleBarier = 10;
 
         // Data input
         System.out.println("Enter starting Kilometres:");
@@ -26,11 +25,11 @@ public class FuelCalculator {
         float fulePerHundredKilometres = fuelPerKilometre * 100;
 
         // Output
-        if (fulePerHundredKilometres < FuleBarier) {
+        if (fulePerHundredKilometres < 100) {
 
             System.out.printf("Your car burns %f liters of fuel per 100 kilometers. Congratulations! \n", fulePerHundredKilometres);
 
-        } else if (fulePerHundredKilometres > FuleBarier) {
+        } else if (fulePerHundredKilometres > 100) {
 
             System.out.printf("Your car burns %f liters of fuel per 100 kilometers. You have a problem! \n", fulePerHundredKilometres);
 
