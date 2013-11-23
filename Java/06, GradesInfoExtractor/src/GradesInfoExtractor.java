@@ -192,6 +192,12 @@ public class GradesInfoExtractor {
     private static double[][] readInput() {
         System.out.println("Enter the number of students:");
         int numberOfStudents = input.nextInt();
+        
+        while(numberOfStudents < 1 || numberOfStudents > 30) {
+            System.out.println("Invalid number of students! It must be between 1 and 30");
+            numberOfStudents = input.nextInt();
+        }
+        
         double[][] gradesMatrix = new double[numberOfStudents][5];
 
         for (int i = 0; i < gradesMatrix.length; i++) {
