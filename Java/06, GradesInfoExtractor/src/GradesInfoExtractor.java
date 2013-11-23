@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class GradesInfoExtractor {
@@ -17,30 +16,48 @@ public class GradesInfoExtractor {
 //                    {6, 6, 6, 6, 6}
 //                };
 
-        double[][] gradesMatrix = readInput();
+        try {
+            double[][] gradesMatrix = readInput();
 
-        System.out.println("Inital print:");
-        printDouble2DMatix(gradesMatrix);
+            System.out.println("Inital print:");
+            printDouble2DMatix(gradesMatrix);
 
-        double avgGrade = getAverageGrades(gradesMatrix);
+            double avgGrade = getAverageGrades(gradesMatrix);
 
-        System.out.println("Average grades:");
-        System.out.println(avgGrade);
+            System.out.println("Average grades:");
+            System.out.println(avgGrade);
 
-        System.out.println("Student number of student with highest average grades:");
-        System.out.println(getStudentWithMaxAverageGrades(gradesMatrix));
+            System.out.println("Student number of student with highest average grades:");
+            System.out.println(getStudentWithMaxAverageGrades(gradesMatrix));
 
-        System.out.println("Student number of student with lowest average grades:");
-        System.out.println(getStudentWithMinAverageGrades(gradesMatrix));
+            System.out.println("Student number of student with lowest average grades:");
+            System.out.println(getStudentWithMinAverageGrades(gradesMatrix));
 
-        System.out.println("Number of students with average grades above total average:");
-        System.out.println(getNumberOfStudentsWithGradesAboveAverage(gradesMatrix, avgGrade));
+            System.out.println("Number of students with average grades above total average:");
+            System.out.println(getNumberOfStudentsWithGradesAboveAverage(gradesMatrix, avgGrade));
 
-        System.out.println("Number of students with average grades below total average:");
-        System.out.println(getNumberOfStudentsWithGradesBelowAverage(gradesMatrix, avgGrade));
+            System.out.println("Number of students with average grades below total average:");
+            System.out.println(getNumberOfStudentsWithGradesBelowAverage(gradesMatrix, avgGrade));
+            
+        } catch (IllegalArgumentException e) {
+            
+            System.out.println(e.getMessage());
+            System.out.println(e);
+            
+        } catch (Exception e) {
+            
+            System.out.println(e.getMessage());
+            System.out.println(e);
+            
+        }
     }
 
     public static void printDouble2DMatix(double[][] matrix) {
+
+        if (matrix == null) {
+            throw new IllegalArgumentException("The grade matrix must not be null!");
+        }
+
         for (int i = 0; i < matrix.length; i++) {
             System.out.printf("Student %d: ", i + 1);
 
@@ -53,6 +70,11 @@ public class GradesInfoExtractor {
     }
 
     public static double getAverageGrades(double[][] gradesMatrix) {
+
+        if (gradesMatrix == null) {
+            throw new IllegalArgumentException("The grade matrix must not be null!");
+        }
+
         double gradeSum = 0;
         int gradeNumber = 0; // This can be calculated for the array length
 
@@ -67,6 +89,10 @@ public class GradesInfoExtractor {
     }
 
     public static int getStudentWithMaxAverageGrades(double[][] gradesMatrix) {
+        if (gradesMatrix == null) {
+            throw new IllegalArgumentException("The grade matrix must not be null!");
+        }
+
         double maxAvg = Double.MIN_VALUE;
         int studentNumber = 0;
 
@@ -87,6 +113,10 @@ public class GradesInfoExtractor {
     }
 
     public static int getStudentWithMinAverageGrades(double[][] gradesMatrix) {
+        if (gradesMatrix == null) {
+            throw new IllegalArgumentException("The grade matrix must not be null!");
+        }
+
         double minAvg = Double.MAX_VALUE;
         int studentNumber = 0;
 
@@ -107,6 +137,10 @@ public class GradesInfoExtractor {
     }
 
     public static int getNumberOfStudentsWithGradesAboveAverage(double[][] gradesMatrix, double averageGrades) {
+        if (gradesMatrix == null) {
+            throw new IllegalArgumentException("The grade matrix must not be null!");
+        }
+
         int numberOfStudents = 0;
 
         for (int i = 0; i < gradesMatrix.length; i++) {
@@ -127,6 +161,11 @@ public class GradesInfoExtractor {
     }
 
     public static int getNumberOfStudentsWithGradesBelowAverage(double[][] gradesMatrix, double averageGrades) {
+
+        if (gradesMatrix == null) {
+            throw new IllegalArgumentException("The grade matrix must not be null!");
+        }
+
         int numberOfStudents = 0;
 
         for (int i = 0; i < gradesMatrix.length; i++) {
@@ -159,13 +198,13 @@ public class GradesInfoExtractor {
             for (int j = 0; j < gradesMatrix[0].length; j++) {
                 System.out.printf("Enter grade %d for student %d:\n", j + 1, i + 1);
                 double value = input.nextDouble();
-                
+
                 // Validation
                 while (!validateGradeValue(value)) {
                     System.out.println("Invalid value! Try again:");
                     value = input.nextDouble();
                 }
-                
+
                 gradesMatrix[i][j] = value;
             }
         }
