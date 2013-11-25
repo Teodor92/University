@@ -10,7 +10,7 @@ package pkg011.upperlowercasetriming;
 public class UpperLowerCaseTriming {
 
     public static void main(String[] args) {
-        String sentence = "                      I'm a sample sentence! ";
+        String sentence = "                                I'm a sample sentence! ";
         
         String newSentence = sentence.toUpperCase();
         

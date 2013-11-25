@@ -6,21 +6,16 @@ public class WhileLoops {
 
     public static void main(String[] args) {
 
-        int intervalStart = 0;
-        int intervalEnd = 0;
-
-        while (true) {
-            intervalStart++;
-
-            if (intervalStart % 3 == 0) {
+        int number = 0;
+        
+        while (number < 100) {            
+            number++;
+            
+            if (number % 3 == 0) {
                 continue;
             }
-
-            System.out.println(intervalStart);
-
-            if (intervalStart == intervalEnd) {
-                break;
-            }
+            
+            System.out.println(number);
         }
 
     }

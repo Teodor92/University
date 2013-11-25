@@ -13,7 +13,6 @@ public class NestedLoops {
             
             System.out.println();
         }
-        
     }
     
 }

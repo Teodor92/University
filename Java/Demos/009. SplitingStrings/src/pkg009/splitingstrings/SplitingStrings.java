@@ -12,7 +12,7 @@ public class SplitingStrings {
     public static void main(String[] args) {
         
         String shopList = "meat, milk, eggs, potatos";
-        String[] listItems = shopList.split("[, ]+");
+        String[] listItems = shopList.split(",");
         
         for (String item : listItems) {
             System.out.println(item);

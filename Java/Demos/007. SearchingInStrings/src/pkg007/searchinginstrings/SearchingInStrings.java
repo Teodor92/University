@@ -11,7 +11,7 @@ public class SearchingInStrings {
 
     public static void main(String[] args) {
         String sentence = "We all live in a yellow submarine!";
-        String word = "yellow";
+        String word = "all";
         
         System.out.println(sentence.indexOf(word));
     }

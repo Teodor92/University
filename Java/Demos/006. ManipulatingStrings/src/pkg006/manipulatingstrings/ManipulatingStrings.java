@@ -14,7 +14,7 @@ public class ManipulatingStrings {
         String secondWord = "me";
         String thirdWord = "please!";
         
-        String result = firstWord + " " + secondWord + " " + thirdWord;
+        String result = firstWord + secondWord + thirdWord;
         
         System.out.println(result);
     }

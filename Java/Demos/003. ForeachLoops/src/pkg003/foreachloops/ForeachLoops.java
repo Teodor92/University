@@ -5,6 +5,7 @@ public class ForeachLoops {
 
     public static void main(String[] args) {
         int[] randomNumbers = {1, 132, 33, 23, 11, 15, 1233, 22};
+        
         int borderNumber = 15;
 
         for (int number : randomNumbers) {

@@ -13,8 +13,13 @@ public class ReplacingStrings {
         String sentence = "I love Microsoft. C# is great!";
         
         String newSentence = sentence.replace("Microsoft", "Java");
+        
+       
+        
         String newerSentence = newSentence.replace("C#", "Java");
+        
         System.out.println(newerSentence);
+       
     }
 
 }
