@@ -51,14 +51,14 @@ ON st.UniversityId = un.UniversityId
 GROUP BY un.Name
 
 -- 10. Geting the average age for UNWE
-SELECT un.Name, AVG(Age)  FROM [Students] st
+SELECT un.Name, AVG(Age) as [Average Age]  FROM [Students] st
 JOIN Universities un 
 ON st.UniversityId = un.UniversityId
 GROUP BY un.Name
 HAVING un.Name = 'UNWE'
 
 -- 11. Get the count of all students
-SELECT COUNT(StudentId) FROM Students
+SELECT COUNT(StudentId) as [Student count] FROM [Students]
 
 -- 12. Get the age of the oldest student
-SELECT MAX(st.Age) FROM [Students] st
+SELECT MAX(st.Age) as [Highest age] FROM [Students] st
