@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. TagModifier", "01. TagModifier\01. TagModifier.csproj", "{F73E72D4-DDFB-4937-871B-146AE41C2F50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. SentenceExtractor", "02. SentenceExtractor\02. SentenceExtractor.csproj", "{56CE689C-588F-470E-9CE1-415780F4E5FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. QuadraticEquationCalculator", "03. QuadraticEquationCalculator\03. QuadraticEquationCalculator.csproj", "{A36E8549-18DD-46FB-B52D-7ABA3D6672BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. UniversityProgramAnalyser", "04. UniversityProgramAnalyser\04. UniversityProgramAnalyser.csproj", "{5BD31075-EE7A-4EFB-9ED3-EED866259178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. SSNAnalyser", "05. SSNAnalyser\05. SSNAnalyser.csproj", "{9647D776-471A-4A4D-9493-133838584EC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Common", "Homework.Common\Homework.Common.csproj", "{C63256BC-F36E-4AB6-8EC2-354376F7ABCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F73E72D4-DDFB-4937-871B-146AE41C2F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73E72D4-DDFB-4937-871B-146AE41C2F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73E72D4-DDFB-4937-871B-146AE41C2F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73E72D4-DDFB-4937-871B-146AE41C2F50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CE689C-588F-470E-9CE1-415780F4E5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CE689C-588F-470E-9CE1-415780F4E5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CE689C-588F-470E-9CE1-415780F4E5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CE689C-588F-470E-9CE1-415780F4E5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36E8549-18DD-46FB-B52D-7ABA3D6672BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36E8549-18DD-46FB-B52D-7ABA3D6672BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36E8549-18DD-46FB-B52D-7ABA3D6672BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36E8549-18DD-46FB-B52D-7ABA3D6672BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BD31075-EE7A-4EFB-9ED3-EED866259178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD31075-EE7A-4EFB-9ED3-EED866259178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD31075-EE7A-4EFB-9ED3-EED866259178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD31075-EE7A-4EFB-9ED3-EED866259178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9647D776-471A-4A4D-9493-133838584EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9647D776-471A-4A4D-9493-133838584EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9647D776-471A-4A4D-9493-133838584EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9647D776-471A-4A4D-9493-133838584EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63256BC-F36E-4AB6-8EC2-354376F7ABCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63256BC-F36E-4AB6-8EC2-354376F7ABCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63256BC-F36E-4AB6-8EC2-354376F7ABCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63256BC-F36E-4AB6-8EC2-354376F7ABCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
