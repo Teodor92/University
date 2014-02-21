@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace _05.SSNAnalyser
+﻿namespace _05.SSNAnalyser
 {
     using System;
     using System.Globalization;
@@ -21,7 +19,7 @@ namespace _05.SSNAnalyser
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             ExtractBirthDateFormString("9204028463");
 
-            var pinString = string.Empty;
+            string pinString;
 
             while (true)
             {
