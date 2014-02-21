@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. TaskExecutor", "01. TaskExecutor\01. TaskExecutor.csproj", "{4D25EE82-CF4A-4938-8180-D92D67E9FDB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Common", "Homework.Common\Homework.Common.csproj", "{66D9E623-7863-4B1F-94DC-8E71A6CC271B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D25EE82-CF4A-4938-8180-D92D67E9FDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D25EE82-CF4A-4938-8180-D92D67E9FDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D25EE82-CF4A-4938-8180-D92D67E9FDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D25EE82-CF4A-4938-8180-D92D67E9FDB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D9E623-7863-4B1F-94DC-8E71A6CC271B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D9E623-7863-4B1F-94DC-8E71A6CC271B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D9E623-7863-4B1F-94DC-8E71A6CC271B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D9E623-7863-4B1F-94DC-8E71A6CC271B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
