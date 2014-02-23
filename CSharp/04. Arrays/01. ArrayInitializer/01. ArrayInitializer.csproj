@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>9d5e661c-4882-467e-9f4e-383c6e357df9</ProjectGuid>
+    <ProjectGuid>{485A36C9-8195-4C11-AF3B-5BDD0B135C57}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_01.ArrayInitializer</RootNamespace>

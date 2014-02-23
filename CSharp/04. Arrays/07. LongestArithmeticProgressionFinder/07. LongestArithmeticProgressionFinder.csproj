@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>4e42b0e2-628f-4fba-8bc2-d32ef13e37b2</ProjectGuid>
+    <ProjectGuid>{1F9FB02E-217B-48D1-B139-0D3FD772F947}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_07.LongestArithmeticProgressionFinder</RootNamespace>

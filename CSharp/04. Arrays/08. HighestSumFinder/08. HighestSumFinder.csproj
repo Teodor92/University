@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>ad45e637-29ac-412a-a8f3-cb8718b363dc</ProjectGuid>
+    <ProjectGuid>{2B6EA8C5-5DA1-4842-AD10-368FCA5C34E7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_08.HighestSumFinder</RootNamespace>

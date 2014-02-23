@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>614c087d-4388-4b97-9f99-5f58814c38ac</ProjectGuid>
+    <ProjectGuid>{837F8BBA-D1E6-4C0B-BD25-A76F2BBEF2C1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_05.LongestSequenceFinder</RootNamespace>

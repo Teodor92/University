@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>5aa71da6-cd28-4bfa-bc4f-d45b3c98ad49</ProjectGuid>
+    <ProjectGuid>{3D7ADAC2-8A16-46F0-8372-18F1B0FB063E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_03.ArrayRead</RootNamespace>
