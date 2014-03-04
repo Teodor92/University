@@ -1,9 +1,9 @@
-﻿using System.Globalization;
-using System.Text;
-using Homework.Common;
-
-namespace _05.LongestSequenceFinder
+﻿namespace _05.LongestSequenceFinder
 {
+    using System;
+
+    using Homework.Common;
+
     /// <summary>
     /// Finds the longest sequence of equal elements in an array. 
     /// </summary>
@@ -12,35 +12,55 @@ namespace _05.LongestSequenceFinder
     /// </example>
     public class Program
     {
+        private const string ArreyLengthPromptMessage = "Enter length for array: ";
+        private const string ElementAtPositionMessage = "Enter element at position {0}: ";
+
         internal static void Main(string[] args)
         {
-            var bestSequance = string.Empty;
-            var currentSequnce = new StringBuilder();
-            var bestSequenceCount = int.MinValue;
-            var currentSequenceCount = 1;
-            var sampleArray = new[] { 2, 1, 1, 2, 3, 3, 2, 2, 2, 1 };
+            var arrayLength = ConsoleInputHelper.SafeRead<int>(ArreyLengthPromptMessage);
+            var array = new int[arrayLength];
 
-            for (int i = 0; i < sampleArray.Length - 1; i++)
+            var currentLength = 1;
+            var currentSequenceNumber = 0;
+            var maxSequenceNumber = 0;
+            var maxLength = 1;
+
+            for (int i = 0; i < array.Length; i++)
             {
-                if (sampleArray[i] == sampleArray[i + 1])
+                array[i] = ConsoleInputHelper.SafeRead<int>(string.Format(ElementAtPositionMessage, i));
+
+                if (i == 0)
                 {
-                    currentSequenceCount++;
-                    currentSequnce.AppendFormat("{0}, ", sampleArray[i]);
+                    currentSequenceNumber = array[i];
+                    maxSequenceNumber = currentSequenceNumber;
+                    continue;
+                }
+
+                if (currentSequenceNumber == array[i])
+                {
+                    currentLength++;
+
+                    if (currentLength >= maxLength)
+                    {
+                        maxLength = currentLength;
+                        maxSequenceNumber = currentSequenceNumber;
+                    }
                 }
                 else
                 {
-                    if (bestSequenceCount < currentSequenceCount)
-                    {
-                        bestSequenceCount = currentSequenceCount;
-                        bestSequance = currentSequnce.ToString().Trim(',');
-                        currentSequnce.Clear();
-                    }
-
-                    currentSequenceCount = 1;
+                    currentLength = 1;
+                    currentSequenceNumber = array[i];
                 }
             }
 
-            ConsoleOutputHelper.WriteMessage(bestSequance);
+            Console.Write("Largest sequence:{");
+
+            for (int i = 0; i < maxLength; i++)
+            {
+                Console.Write(" {0} ", maxSequenceNumber);
+            }
+
+            Console.WriteLine("}");
         }
     }
 }

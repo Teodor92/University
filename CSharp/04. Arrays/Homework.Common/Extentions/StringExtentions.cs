@@ -1,6 +1,7 @@
 ﻿namespace Homework.Common.Extentions
 {
     using System.ComponentModel;
+    using System.Text;
 
     public static class StringExtentions
     {
@@ -13,6 +14,19 @@
             }
 
             return default(T);
+        }
+
+        public static string Create(this string input, string element, int times, char separator)
+        {
+            var output = new StringBuilder();
+            for (int i = 0; i < times; i++)
+            {
+                output.Append(element);
+                output.Append(separator);
+                output.Append(' ');
+            }
+
+            return output.ToString().Trim(new[] { separator, ' ' });
         }
     }
 }
