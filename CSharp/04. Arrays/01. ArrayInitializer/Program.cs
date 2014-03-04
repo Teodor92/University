@@ -1,6 +1,6 @@
 ﻿namespace _01.ArrayInitializer
 {
-    using System;
+    using Homework.Common;
 
     /// <summary>
     /// Creates an array of 20 int objects  and initializes each of them with a value equal to the product of 
@@ -17,7 +17,7 @@
                 sampleArray[i] = i * 5;
             }
 
-            Console.WriteLine(string.Join(", ", sampleArray));
+            ConsoleOutputHelper.WriteMessage(string.Join(", ", sampleArray), ConsoleMessageType.Success);
         }
     }
 }

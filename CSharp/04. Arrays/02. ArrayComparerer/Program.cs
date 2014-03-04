@@ -1,8 +1,7 @@
-﻿using System.Linq;
-
-namespace _02.ArrayComparerer
+﻿namespace _02.ArrayComparerer
 {
-    using System;
+    using System.Linq;
+    using Homework.Common;
 
     /// <summary>
     /// Reads two arrays from the console and 
@@ -10,15 +9,21 @@ namespace _02.ArrayComparerer
     /// </summary>
     public class Program
     {
+        private const string AreEqualMessage = "The too arrays are equal.";
+        private const string AreNotEqualMessage = "The too arrays are NOT equal";
+
         internal static void Main(string[] args)
         {
-            bool areEqual = true;
             var firstArray = new int[12];
             var secondArray = new int[12];
 
             if (firstArray.SequenceEqual(secondArray))
             {
-                Console.WriteLine("Ravni");
+                ConsoleOutputHelper.WriteMessage(AreEqualMessage, ConsoleMessageType.Success);
+            }
+            else
+            {
+                ConsoleOutputHelper.WriteMessage(AreNotEqualMessage, ConsoleMessageType.Warrning);
             }
         }
     }
