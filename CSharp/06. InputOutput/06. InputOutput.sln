@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. FileWriter", "01. FileW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. CreditInfoSaver", "02. CreditInfoSaver\02. CreditInfoSaver.csproj", "{5CD323F1-1D3A-40F3-A720-D5CAF3E41901}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Common", "Homework.Common\Homework.Common.csproj", "{57547B35-BD5D-4569-85EA-9789857B832E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5CD323F1-1D3A-40F3-A720-D5CAF3E41901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CD323F1-1D3A-40F3-A720-D5CAF3E41901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CD323F1-1D3A-40F3-A720-D5CAF3E41901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57547B35-BD5D-4569-85EA-9789857B832E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57547B35-BD5D-4569-85EA-9789857B832E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57547B35-BD5D-4569-85EA-9789857B832E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57547B35-BD5D-4569-85EA-9789857B832E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

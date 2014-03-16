@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89ED478E-25B5-4C86-B9F6-38BF89664755}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{57547B35-BD5D-4569-85EA-9789857B832E}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01.FileWriter</RootNamespace>
-    <AssemblyName>_01.FileWriter</AssemblyName>
+    <RootNamespace>Homework.Common</RootNamespace>
+    <AssemblyName>Homework.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,18 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DirecotryScanner.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ConsoleInputHelper.cs" />
+    <Compile Include="ConsoleMessageType.cs" />
+    <Compile Include="ConsoleOutputHelper.cs" />
+    <Compile Include="Extentions\StringExtentions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Homework.Common\Homework.Common.csproj">
-      <Project>{57547B35-BD5D-4569-85EA-9789857B832E}</Project>
-      <Name>Homework.Common</Name>
-    </ProjectReference>
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
