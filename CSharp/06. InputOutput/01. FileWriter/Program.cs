@@ -1,10 +1,8 @@
-﻿using System.Text;
-using Homework.Common;
-
-namespace _01.FileWriter
+﻿namespace _01.FileWriter
 {
     using System;
-    using System.IO;
+
+    using Homework.Common;
 
     public class Program
     {
