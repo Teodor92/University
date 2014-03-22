@@ -1,0 +1,6 @@
+Monthly Interest: aaaa
+Deadline: aaa
+Loan Cost: aaa
+Monthly Taxes: aaa
+Overdue Interest: aaaa
+Yearly Cost Interest: aaa
