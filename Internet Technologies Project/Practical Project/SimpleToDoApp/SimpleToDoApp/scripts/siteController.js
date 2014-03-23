@@ -7,11 +7,13 @@
     });
 
     // nav pages click load
-    $("#navigation-link").on("click", "a", function (e) {
+    $("#navigation-link").on("click", "a", function () {
         var view = $(this).data("view");
 
         viewsFactory.getTemplate(view).done(function (data) {
             $(siteContentContaierId).html(data);
+        }, function(err) {
+            console.log(err);
         });
     });
 });

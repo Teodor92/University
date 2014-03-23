@@ -6,6 +6,7 @@
     function getTemplate(name) {
 
         var deferred = Q.defer();
+        jQuery.support.cors = true;
 
         if (templates[name]) {
             deferred.resolve(templates[name]);
