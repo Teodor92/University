@@ -4,10 +4,41 @@
     <title>Simple To Do Application</title>
     <link href="styles/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="styles/bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="styles/site.css" rel="stylesheet" />
     <script src="scripts/jquery/jquery-1.9.0.min.js"></script>
+    <script src="scripts/libs/q.min.js"></script>
+    <script src="scripts/views/viewFactory.js"></script>
+    <script src="scripts/siteController.js"></script>
     <script src="scripts/bootstrap/bootstrap.min.js"></script>
 </head>
-<body>
-    <h1>Hello world!</h1>
-</body>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Simple To Dos</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" id="navigation-link">
+                        <li><a href="#" data-view="home">Home</a></li>
+                        <li><a href="#" data-view="contacts">Contacts</a></li>
+                        <li><a href="#" data-view="about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="body-content">
+                
+            </div>
+            <hr />
+            <footer>
+                <p>&copy; My ASP.NET Application</p>
+            </footer>
+        </div>
+    </body>
 </html>
