@@ -6,7 +6,6 @@
     {
         internal static void Main(string[] args)
         {
-
             decimal endInterval = decimal.Parse(Console.ReadLine());
 
             while (!IsInt(endInterval))

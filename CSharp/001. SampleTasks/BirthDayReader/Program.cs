@@ -138,7 +138,8 @@
 
                     return "Capricorn";
             }
-            return "";
+
+            return string.Empty;
         }
 
         private static IEnumerable<AstralSign> LoadAstralSigns()
