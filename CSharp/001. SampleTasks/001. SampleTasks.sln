@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DateReader", "01. DateReader\01. DateReader.csproj", "{1996A993-7D84-4883-B8E1-201FD6DED003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. PrimeNumberFinder", "02. PrimeNumberFinder\02. PrimeNumberFinder.csproj", "{75A893F6-73FA-4D67-B2A2-3EF94B0F683E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. FileComparer", "03. FileComparer\03. FileComparer.csproj", "{01E98578-75C2-4E06-9C39-B979A0E115E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. DirectoryFilesExtractor", "04. DirectoryFilesExtractor\04. DirectoryFilesExtractor.csproj", "{696B4E12-06D9-4315-A60B-9C3740D9AAE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. BirthDayReader", "BirthDayReader\05. BirthDayReader.csproj", "{29FED5D7-8287-459C-8756-03915ED86955}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1996A993-7D84-4883-B8E1-201FD6DED003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1996A993-7D84-4883-B8E1-201FD6DED003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1996A993-7D84-4883-B8E1-201FD6DED003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1996A993-7D84-4883-B8E1-201FD6DED003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A893F6-73FA-4D67-B2A2-3EF94B0F683E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A893F6-73FA-4D67-B2A2-3EF94B0F683E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A893F6-73FA-4D67-B2A2-3EF94B0F683E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A893F6-73FA-4D67-B2A2-3EF94B0F683E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E98578-75C2-4E06-9C39-B979A0E115E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E98578-75C2-4E06-9C39-B979A0E115E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E98578-75C2-4E06-9C39-B979A0E115E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E98578-75C2-4E06-9C39-B979A0E115E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696B4E12-06D9-4315-A60B-9C3740D9AAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696B4E12-06D9-4315-A60B-9C3740D9AAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696B4E12-06D9-4315-A60B-9C3740D9AAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696B4E12-06D9-4315-A60B-9C3740D9AAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29FED5D7-8287-459C-8756-03915ED86955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29FED5D7-8287-459C-8756-03915ED86955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29FED5D7-8287-459C-8756-03915ED86955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29FED5D7-8287-459C-8756-03915ED86955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
