@@ -10,7 +10,6 @@
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
 
-            var astralSigns = LoadAstralSigns();
             var astralSignsStatistic = new Dictionary<string, int>();
 
             using (var reader = new StreamReader(@"../../Birthdays.txt"))
@@ -140,25 +139,6 @@
             }
 
             return string.Empty;
-        }
-
-        private static IEnumerable<AstralSign> LoadAstralSigns()
-        {
-            return new HashSet<AstralSign>()
-            {
-                new AstralSign()
-                {
-                    Name = "Aries",
-                    StartDate = new DateTime(99, 3, 21),
-                    EndDate = new DateTime(99, 4, 19)
-                },
-                new AstralSign()
-                {
-                    Name = "Taurus",
-                    StartDate = new DateTime(99, 4, 20),
-                    EndDate = new DateTime(99, 5, 20)
-                },
-            };
         }
     }
 }
