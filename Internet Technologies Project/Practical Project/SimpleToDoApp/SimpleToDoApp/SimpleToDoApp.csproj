@@ -57,17 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about.html" />
+    <Content Include="categories.html" />
+    <Content Include="events-by-category.html" />
+    <Content Include="events-by-date.html" />
+    <Content Include="events.html" />
     <Content Include="images\to-do-app-logo.png" />
-    <Content Include="partials\about.html" />
-    <Content Include="partials\contacts.html" />
-    <Content Include="partials\home.html" />
-    <Content Include="scripts\libs\class.js" />
-    <Content Include="scripts\libs\cryptoJS.js" />
-    <Content Include="scripts\libs\httpRequester.js" />
-    <Content Include="scripts\libs\q.js" />
-    <Content Include="scripts\libs\q.min.js" />
-    <Content Include="scripts\siteController.js" />
-    <Content Include="scripts\views\viewFactory.js" />
+    <Content Include="sitemap.html" />
     <Content Include="styles\bootstrap\bootstrap-theme.css" />
     <Content Include="styles\bootstrap\bootstrap-theme.min.css" />
     <Content Include="styles\bootstrap\bootstrap.css" />
@@ -84,6 +80,9 @@
     <Content Include="scripts\jquery\jquery-1.9.0.js" />
     <Content Include="scripts\jquery\jquery-1.9.0.min.js" />
     <Content Include="styles\site.css" />
+    <Content Include="tags.html" />
+    <Content Include="todo-lists.html" />
+    <Content Include="todos.html" />
     <Content Include="Web.config" />
     <Content Include="scripts\jquery\jquery-1.9.0.min.map" />
   </ItemGroup>
