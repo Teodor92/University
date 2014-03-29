@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="about.html" />
     <Content Include="categories.html" />
+    <Content Include="contacts.html" />
     <Content Include="events-by-category.html" />
     <Content Include="events-by-date.html" />
     <Content Include="events.html" />
@@ -68,12 +69,12 @@
     <Content Include="styles\bootstrap\bootstrap-theme.min.css" />
     <Content Include="styles\bootstrap\bootstrap.css" />
     <Content Include="styles\bootstrap\bootstrap.min.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="styles\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="styles\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="styles\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="styles\fonts\glyphicons-halflings-regular.eot" />
     <None Include="scripts\jquery\jquery-1.9.0.intellisense.js" />
     <Content Include="scripts\bootstrap\bootstrap.js" />
     <Content Include="scripts\bootstrap\bootstrap.min.js" />

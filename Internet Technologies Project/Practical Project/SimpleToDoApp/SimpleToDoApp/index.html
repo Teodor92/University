@@ -1,41 +1,54 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Simple Organizer</title>
-    <link href="styles/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="styles/bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="styles/site.css" rel="stylesheet" />
-    <script src="scripts/jquery/jquery-1.9.0.min.js"></script>
-    <script src="scripts/bootstrap/bootstrap.min.js"></script>
-</head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">Simple To Dos</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav" id="navigation-link">
-                        <li><a href="#" data-view="home">Home</a></li>
-                        <li><a href="#" data-view="contacts">Contacts</a></li>
-                        <li><a href="#" data-view="about">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple Organizer</title>
+        <link href="styles/bootstrap/bootstrap.min.css" rel="stylesheet" />
+        <link href="styles/bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
+        <link href="styles/site.css" rel="stylesheet" />
+        <script src="scripts/jquery/jquery-1.9.0.min.js"></script>
+        <script src="scripts/bootstrap/bootstrap.min.js"></script>
+    </head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div id="body-content">
-                
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-check"></span>Simple To Dos</a>
             </div>
-            <hr />
-            <footer>
-                <p>&copy; Simple Organizer</p>
-            </footer>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" id="navigation-link">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="events.html">All events</a></li>
+                            <li><a href="events-by-date.html">Events by date</a></li>
+                            <li><a href="events-by-category.html">Events by category</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="tags.html">Tags</a></li>
+                    <li><a href="todo-lists.html">To Do lists</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
         </div>
-    </body>
+    </div>
+    <div class="container">
+        <div id="body-content">
+
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; Simple Organizer</p>
+        </footer>
+    </div>
+</body>
 </html>
