@@ -44,7 +44,31 @@
     <div class="container">
         <div id="body-content">
             
-            <h1>Todos page</h1>
+            <h1>Contacts</h1>
+            
+            <form action="#" method="POST">
+                <div class="row top-buffer">
+                    <div class="col-md-4">
+                        <label class="pull-right" for="email">E-mail</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" type="text" name="email" id="email" placeholder="Enter e-mail" />
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-md-4">
+                        <label class="pull-right" for="content">Content</label>
+                    </div>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="content" rows="10" placeholder="Content"></textarea>           
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-md-offset-4 col-md-4 text-center">
+                        <input type="submit" class="form-control btn btn-success" value="Send"/>
+                    </div>
+                </div>
+            </form>
 
         </div>
         <footer>

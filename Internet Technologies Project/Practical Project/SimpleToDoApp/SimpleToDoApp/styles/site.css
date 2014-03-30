@@ -4,7 +4,15 @@
     padding-bottom: 20px;
 }
 
-/*.navbar {
-    background: url("../images/to-do-app-logo.png") no-repeat scroll 0 0 #000000;
-    background: url("../images/to-do-app-logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-}*/
+.top-buffer {
+    margin-top: 20px;
+}
+
+footer {
+    display: inline-block;
+    clear: both;
+    width: 75%;
+    position: absolute;
+    margin-top: -3em;
+    bottom: 1px;
+}
