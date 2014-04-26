@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bookstore>
+	<book>
+		<title>Sample Title</title>
+		<author>Ivano Ivanov</author>
+		<price>123</price>
+	</book>
+	<book>
+		<title>Sample Title</title>
+		<author>Pesho Peshev</author>
+		<price>123</price>
+	</book>
+	<book>
+		<title>Sample Title</title>
+		<author>Georgi Georrgiev</author>
+		<price>123</price>
+	</book>
+</bookstore>
