@@ -8,11 +8,23 @@
     margin-top: 20px;
 }
 
-footer {
+.bottom-buffer {
+    margin-bottom: 20px;
+}
+
+.left-buffer {
+    margin-left: 20px;
+}
+
+.right-buffer {
+    margin-right: 20px;
+}
+
+/*footer {
     display: inline-block;
     clear: both;
     width: 75%;
     position: absolute;
     margin-top: -3em;
     bottom: 1px;
-}
+}*/
