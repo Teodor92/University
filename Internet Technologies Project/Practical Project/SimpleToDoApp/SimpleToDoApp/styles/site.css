@@ -20,11 +20,12 @@
     margin-right: 20px;
 }
 
-/*footer {
-    display: inline-block;
-    clear: both;
-    width: 75%;
-    position: absolute;
-    margin-top: -3em;
-    bottom: 1px;
-}*/
+.todo-lists-tiles a {
+    width: 100%;
+    height: 100px;
+    line-height: 80px;
+}
+
+.list-tile {
+    margin-top: 10px;
+}

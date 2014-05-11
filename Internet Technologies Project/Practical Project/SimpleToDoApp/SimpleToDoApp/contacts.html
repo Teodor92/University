@@ -52,27 +52,30 @@
             </div>
 
             <form action="#" method="POST">
-                <div class="row top-buffer">
-                    <div class="col-md-4">
-                        <label class="pull-right" for="email">E-mail</label>
+                <fieldset>
+                    <legend>Contact form</legend>
+                    <div class="row top-buffer">
+                        <div class="col-md-4">
+                             <label class="pull-right" for="email">E-mail <span data-toggle="tooltip" data-placement="top" title="Your contact email" class="glyphicon glyphicon-question-sign"></span></label>
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" name="email" id="email" placeholder="Enter e-mail" />
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <input class="form-control" type="text" name="email" id="email" placeholder="Enter e-mail" />
+                    <div class="row top-buffer">
+                        <div class="col-md-4">
+                            <label class="pull-right" for="content">Content <span data-toggle="tooltip" data-placement="top" title="Why are you writhing us?" class="glyphicon glyphicon-question-sign"></span></label>
+                        </div>
+                        <div class="col-md-4">
+                            <textarea class="form-control" id="content" rows="10" placeholder="Content"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="row top-buffer">
-                    <div class="col-md-4">
-                        <label class="pull-right" for="content">Content</label>
+                    <div class="row top-buffer">
+                        <div class="col-md-offset-4 col-md-4 text-center">
+                            <input type="submit" class="form-control btn btn-success" value="Send" />
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <textarea class="form-control" id="content" rows="10" placeholder="Content"></textarea>
-                    </div>
-                </div>
-                <div class="row top-buffer">
-                    <div class="col-md-offset-4 col-md-4 text-center">
-                        <input type="submit" class="form-control btn btn-success" value="Send" />
-                    </div>
-                </div>
+                </fieldset>
             </form>
 
         </div>
@@ -81,5 +84,10 @@
             <p>&copy; Simple Organizer</p>
         </footer>
     </div>
+    <script type="text/javascript">
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+    </script>
 </body>
 </html>
