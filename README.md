@@ -1,4 +1,4 @@
 University
 ==========
 
-My homework for UNWE programing courses.
+Homework and projects for UNWE programing courses.
