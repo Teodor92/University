@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{B3A40948-13FE-4973-BD5B-93D83A1EE075}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{9715E7B4-42F9-4B71-AA69-6A8A5BAA9676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slms.Common", "Slms.Common\Slms.Common.csproj", "{20FA94CD-BAA0-48F4-B5C7-7B51CAA2A935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slms.Data", "Data\Slms.Data\Slms.Data.csproj", "{DF67D3D9-1235-4428-94D9-8EB96EF5E31D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slms.Data.Contracts", "Data\Slms.Data.Contracts\Slms.Data.Contracts.csproj", "{CB3B3E4A-1D11-41E7-8F5E-FAAEA63EFCEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slms.Data.Models", "Data\Slms.Data.Models\Slms.Data.Models.csproj", "{83B84435-0A7E-4254-9F33-164C19C488CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slms.Desktop", "Desktop\Slms.Desktop\Slms.Desktop.csproj", "{79550A6A-AAFB-429E-9CB3-3FB7CFCC0260}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6DD8858B-43BF-4255-8F1E-196CB5A41F04}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20FA94CD-BAA0-48F4-B5C7-7B51CAA2A935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FA94CD-BAA0-48F4-B5C7-7B51CAA2A935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FA94CD-BAA0-48F4-B5C7-7B51CAA2A935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FA94CD-BAA0-48F4-B5C7-7B51CAA2A935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF67D3D9-1235-4428-94D9-8EB96EF5E31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF67D3D9-1235-4428-94D9-8EB96EF5E31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF67D3D9-1235-4428-94D9-8EB96EF5E31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF67D3D9-1235-4428-94D9-8EB96EF5E31D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB3B3E4A-1D11-41E7-8F5E-FAAEA63EFCEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB3B3E4A-1D11-41E7-8F5E-FAAEA63EFCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB3B3E4A-1D11-41E7-8F5E-FAAEA63EFCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB3B3E4A-1D11-41E7-8F5E-FAAEA63EFCEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B84435-0A7E-4254-9F33-164C19C488CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B84435-0A7E-4254-9F33-164C19C488CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B84435-0A7E-4254-9F33-164C19C488CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B84435-0A7E-4254-9F33-164C19C488CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79550A6A-AAFB-429E-9CB3-3FB7CFCC0260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79550A6A-AAFB-429E-9CB3-3FB7CFCC0260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79550A6A-AAFB-429E-9CB3-3FB7CFCC0260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79550A6A-AAFB-429E-9CB3-3FB7CFCC0260}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF67D3D9-1235-4428-94D9-8EB96EF5E31D} = {B3A40948-13FE-4973-BD5B-93D83A1EE075}
+		{CB3B3E4A-1D11-41E7-8F5E-FAAEA63EFCEB} = {B3A40948-13FE-4973-BD5B-93D83A1EE075}
+		{83B84435-0A7E-4254-9F33-164C19C488CC} = {B3A40948-13FE-4973-BD5B-93D83A1EE075}
+		{79550A6A-AAFB-429E-9CB3-3FB7CFCC0260} = {9715E7B4-42F9-4B71-AA69-6A8A5BAA9676}
+	EndGlobalSection
+EndGlobal
