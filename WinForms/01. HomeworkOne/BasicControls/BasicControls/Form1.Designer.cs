@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SavePersonalData = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.birthCity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.SavePersonalData);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.birthCity);
             this.groupBox1.Controls.Add(this.label2);
@@ -72,15 +72,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Data";
             // 
-            // button1
+            // SavePersonalData
             // 
-            this.button1.Location = new System.Drawing.Point(44, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(291, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Save Personal Data";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SavePersonalData.Location = new System.Drawing.Point(44, 108);
+            this.SavePersonalData.Name = "SavePersonalData";
+            this.SavePersonalData.Size = new System.Drawing.Size(291, 23);
+            this.SavePersonalData.TabIndex = 6;
+            this.SavePersonalData.Text = "Save Personal Data";
+            this.SavePersonalData.UseVisualStyleBackColor = true;
+            this.SavePersonalData.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -318,7 +318,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SavePersonalData;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox birthCity;
         private System.Windows.Forms.Label label2;

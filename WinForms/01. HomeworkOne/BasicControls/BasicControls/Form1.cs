@@ -8,7 +8,7 @@
     {
         public frm1()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
