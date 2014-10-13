@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/images/get_bg.gif</ImageUrl>
+    <NavigateUrl>http://www.get.bg</NavigateUrl>
+    <AlternateText>Get Bg</AlternateText>
+    <Impressions>20</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/travel_bg.gif</ImageUrl>
+    <NavigateUrl>http://www.travel.bg</NavigateUrl>
+    <AlternateText>Travel BG</AlternateText>
+    <Impressions>20</Impressions>
+    <Keyword>banner</Keyword>
+  </Ad>
+</Advertisements>
