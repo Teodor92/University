@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.discountLabael = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.article = new System.Windows.Forms.TextBox();
             this.unitPrice = new System.Windows.Forms.TextBox();
@@ -43,12 +43,12 @@
             this.finishAllSales = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numberOfSales = new System.Windows.Forms.TextBox();
-            this.grandDiscount = new System.Windows.Forms.TextBox();
             this.grandTotal = new System.Windows.Forms.TextBox();
+            this.grandDiscount = new System.Windows.Forms.TextBox();
+            this.numberOfSales = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.grandDiscountlLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,15 +82,15 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Quantity:";
             // 
-            // label4
+            // discountLabael
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Discount:";
+            this.discountLabael.AutoSize = true;
+            this.discountLabael.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountLabael.Location = new System.Drawing.Point(54, 148);
+            this.discountLabael.Name = "discountLabael";
+            this.discountLabael.Size = new System.Drawing.Size(61, 13);
+            this.discountLabael.TabIndex = 3;
+            this.discountLabael.Text = "Discount:";
             // 
             // label5
             // 
@@ -125,6 +125,7 @@
             // 
             // discount
             // 
+            this.discount.Enabled = false;
             this.discount.Location = new System.Drawing.Point(119, 148);
             this.discount.Name = "discount";
             this.discount.Size = new System.Drawing.Size(100, 20);
@@ -132,6 +133,7 @@
             // 
             // totalAmount
             // 
+            this.totalAmount.Enabled = false;
             this.totalAmount.Location = new System.Drawing.Point(119, 176);
             this.totalAmount.Name = "totalAmount";
             this.totalAmount.Size = new System.Drawing.Size(100, 20);
@@ -184,7 +186,7 @@
             this.groupBox1.Controls.Add(this.grandDiscount);
             this.groupBox1.Controls.Add(this.numberOfSales);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.grandDiscountlLabel);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(32, 236);
             this.groupBox1.Name = "groupBox1";
@@ -193,25 +195,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Total";
             // 
-            // label6
+            // grandTotal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Number Of Sales:";
+            this.grandTotal.Enabled = false;
+            this.grandTotal.Location = new System.Drawing.Point(271, 46);
+            this.grandTotal.Name = "grandTotal";
+            this.grandTotal.Size = new System.Drawing.Size(100, 20);
+            this.grandTotal.TabIndex = 5;
             // 
-            // label7
+            // grandDiscount
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(143, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Grand Discount:";
+            this.grandDiscount.Enabled = false;
+            this.grandDiscount.Location = new System.Drawing.Point(146, 46);
+            this.grandDiscount.Name = "grandDiscount";
+            this.grandDiscount.Size = new System.Drawing.Size(100, 20);
+            this.grandDiscount.TabIndex = 4;
+            // 
+            // numberOfSales
+            // 
+            this.numberOfSales.Enabled = false;
+            this.numberOfSales.Location = new System.Drawing.Point(21, 47);
+            this.numberOfSales.Name = "numberOfSales";
+            this.numberOfSales.Size = new System.Drawing.Size(100, 20);
+            this.numberOfSales.TabIndex = 3;
             // 
             // label8
             // 
@@ -223,26 +229,25 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Grand Total:";
             // 
-            // numberOfSales
+            // grandDiscountlLabel
             // 
-            this.numberOfSales.Location = new System.Drawing.Point(21, 47);
-            this.numberOfSales.Name = "numberOfSales";
-            this.numberOfSales.Size = new System.Drawing.Size(100, 20);
-            this.numberOfSales.TabIndex = 3;
+            this.grandDiscountlLabel.AutoSize = true;
+            this.grandDiscountlLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grandDiscountlLabel.Location = new System.Drawing.Point(143, 31);
+            this.grandDiscountlLabel.Name = "grandDiscountlLabel";
+            this.grandDiscountlLabel.Size = new System.Drawing.Size(99, 13);
+            this.grandDiscountlLabel.TabIndex = 1;
+            this.grandDiscountlLabel.Text = "Grand Discount:";
             // 
-            // grandDiscount
+            // label6
             // 
-            this.grandDiscount.Location = new System.Drawing.Point(146, 46);
-            this.grandDiscount.Name = "grandDiscount";
-            this.grandDiscount.Size = new System.Drawing.Size(100, 20);
-            this.grandDiscount.TabIndex = 4;
-            // 
-            // grandTotal
-            // 
-            this.grandTotal.Location = new System.Drawing.Point(271, 46);
-            this.grandTotal.Name = "grandTotal";
-            this.grandTotal.Size = new System.Drawing.Size(100, 20);
-            this.grandTotal.TabIndex = 5;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Number Of Sales:";
             // 
             // BaseForm
             // 
@@ -260,7 +265,7 @@
             this.Controls.Add(this.unitPrice);
             this.Controls.Add(this.article);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.discountLabael);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -278,7 +283,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label discountLabael;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox article;
         private System.Windows.Forms.TextBox unitPrice;
@@ -294,7 +299,7 @@
         private System.Windows.Forms.TextBox grandDiscount;
         private System.Windows.Forms.TextBox numberOfSales;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label grandDiscountlLabel;
         private System.Windows.Forms.Label label6;
     }
 }
