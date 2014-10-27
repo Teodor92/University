@@ -59,8 +59,14 @@ go
 
 -- 8. -- buggy?
 
-SELECT pv.ProductName, pv.CompanyName, pv.Country, SUM(od.Quantity) as QuantitySum from ProductsView pv, [Order Details] od
-where pv.Country in ('Spain', 'France', 'Italy')
+----SELECT pv.ProductName, pv.CompanyName, pv.Country, SUM(od.Quantity) as QuantitySum from ProductsView pv, [Order Details] od
+----where pv.Country in ('Spain', 'France', 'Italy')
+----group by pv.ProductName, pv.CompanyName, pv.Country
+----order by pv.ProductName
+
+select pv.ProductName, pv.CompanyName, pv.Country, sum(od.Quantity) as quantity from ProductsView pv
+inner join [Order Details] od on pv.ProductID = od.ProductID
+where pv.Country in ('Spain','France','Italy')
 group by pv.ProductName, pv.CompanyName, pv.Country
 order by pv.ProductName
 
@@ -88,10 +94,15 @@ select dbo.Sum_Product_Sales(1) as unitPrice
 
 -- 11.
 
-select ProductID, ProductName, UnitPrice, dbo.Sum_Product_Sales(ProductID) as ProductSales from Products
-Where (select count(*) from Products p 
-join [Order Details] od on p.ProductID = od.ProductID
-group by od.ProductID) > 0
+----select ProductID, ProductName, UnitPrice, dbo.Sum_Product_Sales(ProductID) as ProductSales from Products pr
+----Where (select count(*) from Products p 
+----join [Order Details] od on p.ProductID = od.ProductID
+----where p.ProductID = pr.ProductID
+----group by pr.ProductID) > 0
+
+select a.ProductID, a.ProductName, a.UnitPrice, dbo.Sum_Product_Sales(a.ProductId) as ProductSum
+from
+(select p.ProductID, p.ProductName, p.UnitPrice from Products p where p.UnitsOnOrder > 50) a
 
 -- 12.
 create function dbo. Avg_Product_Qty(@likeParam nvarchar(20))
