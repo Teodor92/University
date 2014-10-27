@@ -1,0 +1,11 @@
+﻿Due to the limitations of the supported zip file format, the following file(s) had to be renamed.
+
+Original File Name  ->  New File Name
+График_ПрБД.pdf -> File1.pdf
+Задача_01.pdf -> File2.pdf
+Задача_02.pdf -> File3.pdf
+Задача_03.pdf -> File4.pdf
+Задача_04.pdf -> File5.pdf
+Задача_05.pdf -> File6.pdf
+Контролно_пример.pdf -> File7.pdf
+Контролно_условия.pdf -> File8.pdf
