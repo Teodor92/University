@@ -101,7 +101,6 @@ select dbo.Sum_Product_Sales(1) as unitPrice
 ----group by pr.ProductID) > 0
 
 select p.ProductID, p.ProductName, p.UnitPrice, dbo.Sum_Product_Sales(p.ProductID) as sales_sum
-
 from Products p
 where (select
   count(*)
@@ -109,6 +108,7 @@ where (select
   where od.ProductID = p.ProductID) > 50
 go
 
+-- 11. Alternative?
 select a.ProductID, a.ProductName, a.UnitPrice, dbo.Sum_Product_Sales(a.ProductId) as ProductSum
 from
 (select p.ProductID, p.ProductName, p.UnitPrice from Products p where p.UnitsOnOrder > 50) a
