@@ -88,8 +88,25 @@ select dbo.Sum_Product_Sales(1) as unitPrice
 
 -- 11.
 
+select ProductID, ProductName, UnitPrice, dbo.Sum_Product_Sales(ProductID) as ProductSales from Products
+Where (select count(*) from Products p 
+join [Order Details] od on p.ProductID = od.ProductID
+group by od.ProductID) > 0
 
+-- 12.
+create function dbo. Avg_Product_Qty(@likeParam nvarchar(20))
+returns table
+as
+return (select p.ProductID, p.ProductName, sp.CompanyName, sp.Country, AVG(od.UnitPrice) as AverageUnitPrice from Products p
+join Suppliers sp on p.SupplierID = sp.SupplierID 
+join [Order Details] od on p.ProductID = od.ProductID
+group by p.ProductID, p.ProductName, sp.CompanyName, sp.Country
+having sp.Country like @likeParam)
 
+-- 13.
+select * from dbo.Avg_Product_Qty('USA')
+select * from dbo.Avg_Product_Qty('%')
 
 -- 14.
 drop function dbo.Sum_Product_Sales
+drop function dbo.Avg_Product_Qty
