@@ -1,14 +1,14 @@
 USE [SimpleStudentSystem]
 
 -- Inserts sample Faculties
-INSERT INTO [Faculties] VALUES
+INSERT INTO [Faculties]([Name]) VALUES
 ('Informatics'),
 ('Mathematics'),
 ('Biology'),
 ('Economics')
 
 -- Inserts sample Courses
-INSERT INTO [Courses] VALUES
+INSERT INTO [Courses](Name, [Description]) VALUES
 ('C#', 'Basic of C# programing'),
 ('Macroiconomics', 'Basic of macroiconomic theory'),
 ('Mathematics', 'Basic mathematics'),
@@ -16,13 +16,13 @@ INSERT INTO [Courses] VALUES
 ('Databeses','Basic of databases')
 
 -- Inserts sample Univerities
-INSERT INTO [Universities] VALUES
+INSERT INTO [Universities](Name, [Description]) VALUES
 ('Sofia University', 'The Univeristy of Sofia'),
 ('UNWE', 'University of national and world economics'),
 ('TU', ' TU Sofia')
 
 -- Insert Sample Sudents
-INSERT INTO [Students] VALUES
+INSERT INTO [Students](FirstName, MiddleName, LastName, UniversityId, FacultyId, Age) VALUES
 ('Ivan', 'Ivanovich', 'Ivanov', 1, 1, 21),
 ('Bojan', 'Ivanovich', 'Georgiev', 1, 2, 23),
 ('Georgi', 'Genchev', 'Ivanov', 1, 3, 21),
