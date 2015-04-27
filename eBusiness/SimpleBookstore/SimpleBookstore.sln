@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{71BB35CA-FB11-4B92-9C6A-21D1013EC21A}"
 EndProject
@@ -24,6 +24,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{E4C5E3DD-FC1D-49D2-B0C1-A71464E80BF8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookSotre.Tools.Migrator", "SimpleBookSotre.Tools.Migrator\SimpleBookSotre.Tools.Migrator.csproj", "{00CBA0BB-3E8E-4B36-8F64-2FB08342C859}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E2733691-A8A7-4BA2-AB5D-756CABE8E455}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,11 +76,11 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{27317372-F221-4142-8827-3CFA227CC35E} = {71BB35CA-FB11-4B92-9C6A-21D1013EC21A}
+		{52CDBD72-A901-4DAA-AE8C-B37CA012E640} = {71BB35CA-FB11-4B92-9C6A-21D1013EC21A}
+		{C70F7CB8-A523-420E-AF01-03B470FC3478} = {71BB35CA-FB11-4B92-9C6A-21D1013EC21A}
 		{BDE3996B-2436-4434-9FA3-4F6C84483290} = {31AD1703-CE5E-4569-B7B6-7084666B7B24}
 		{279C0BF3-B1A6-41D3-83AA-5FFABDC75CED} = {31AD1703-CE5E-4569-B7B6-7084666B7B24}
 		{F68395D4-1CEA-4696-945E-DA48ADE9080A} = {31AD1703-CE5E-4569-B7B6-7084666B7B24}
-		{52CDBD72-A901-4DAA-AE8C-B37CA012E640} = {71BB35CA-FB11-4B92-9C6A-21D1013EC21A}
-		{C70F7CB8-A523-420E-AF01-03B470FC3478} = {71BB35CA-FB11-4B92-9C6A-21D1013EC21A}
 		{00CBA0BB-3E8E-4B36-8F64-2FB08342C859} = {E4C5E3DD-FC1D-49D2-B0C1-A71464E80BF8}
 	EndGlobalSection
 EndGlobal
