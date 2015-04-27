@@ -1,6 +1,7 @@
 ﻿namespace SimpleBookStore.Data.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Security.Claims;
@@ -13,6 +14,19 @@
 
     public class User : IdentityUser, IDeletableEntity, IAuditInfo
     {
+        private ICollection<ShopingCartItem> shopingCartItems;
+
+        public User()
+        {
+            this.shopingCartItems = new HashSet<ShopingCartItem>();
+        }
+
+        public virtual ICollection<ShopingCartItem> ShopingCartItems
+        {
+            get { return this.shopingCartItems; }
+            set { this.shopingCartItems = value; }
+        }
+
         #region IDeletableEntity
         public bool IsDeleted { get; set; }
 

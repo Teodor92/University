@@ -146,10 +146,13 @@
 
                         if (book != null)
                         {
+                            var user = uow.Users.All().FirstOrDefault(x => x.Email == "teodor.ivanov92@gmail.com") ?? uow.Users.All().FirstOrDefault();
+
                             var cartItem = new ShopingCartItem()
                             {
                                 OrderId = reader.GetString(0),
                                 BookId = book.Id,
+                                UserId = user.Id
                             };
 
                             uow.ShopingCart.Add(cartItem);

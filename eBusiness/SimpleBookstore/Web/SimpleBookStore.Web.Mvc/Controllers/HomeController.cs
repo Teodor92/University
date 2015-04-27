@@ -1,6 +1,8 @@
 ﻿namespace SimpleBookStore.Web.Mvc.Controllers
 {
+    using System.Threading.Tasks;
     using System.Web.Mvc;
+    using System.Web.Routing;
 
     using SimpleBookStore.Common;
     using SimpleBookStore.Data;
@@ -35,11 +37,14 @@
         }
 
         [HttpPost]
-        public ActionResult Contact(ContactUsViewModel viewModel)
+        public async Task<ActionResult> Contact(ContactUsViewModel viewModel)
         {
             if (this.ModelState.IsValid)
             {
-                // TODO: Send mail
+                await MailSender.Instance.SendMailAsync(viewModel.To, viewModel.Title, viewModel.Content);
+
+                this.TempData[GlobalConstants.SuccessMessage] = "Успешно изпратихте имейл!";
+                return this.RedirectToAction("Contact", "Home", new { area = string.Empty });
             }
 
             return View(viewModel);

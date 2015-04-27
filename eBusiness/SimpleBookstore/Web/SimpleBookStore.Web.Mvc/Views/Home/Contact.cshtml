@@ -1,17 +1,46 @@
-﻿@{
+﻿@model SimpleBookStore.Web.Mvc.ViewModels.Home.ContactUsViewModel
+@{
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal"}))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.To, new {@class = "col-md-2 control-label"})
+        <div class="col-sm-10">
+            @Html.EditorFor(x => x.To, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(x => x.To)
+        </div>
+    </div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <div class="form-group">
+        @Html.LabelFor(x => x.From, new {@class = "col-md-2 control-label"})
+        <div class="col-sm-10">
+            @Html.EditorFor(x => x.From, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(x => x.From)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Title, new {@class = "col-md-2 control-label"})
+        <div class="col-sm-10">
+            @Html.EditorFor(x => x.Title, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(x => x.Title)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Content, new {@class = "col-md-2 control-label"})
+        <div class="col-sm-10">
+            @Html.EditorFor(x => x.Content, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(x => x.Content)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">Send email</button>
+        </div>
+    </div>
+}

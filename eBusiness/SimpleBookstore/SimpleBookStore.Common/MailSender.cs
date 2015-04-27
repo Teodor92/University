@@ -4,6 +4,7 @@
     using System.Net;
     using System.Net.Mail;
     using System.Text;
+    using System.Threading.Tasks;
 
     public sealed class MailSender
     {
@@ -50,10 +51,10 @@
             }
         }
 
-        public void SendMailAsync(string recipient, string subject, string messageBody, IEnumerable<string> bccRecipients = null)
+        public async Task SendMailAsync(string recipient, string subject, string messageBody, IEnumerable<string> bccRecipients = null)
         {
             var message = this.PrepareMessage(recipient, subject, messageBody, bccRecipients);
-            this.mailClient.SendAsync(message, null);
+            await this.mailClient.SendMailAsync(message);
         }
 
         public void SendMail(string recipient, string subject, string messageBody, IEnumerable<string> bccRecipients = null)
