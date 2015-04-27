@@ -53,6 +53,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -204,6 +207,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Providers\Common\BaseNewsProvider.cs" />
+    <Compile Include="Providers\Contracts\INewsProvider.cs" />
+    <Compile Include="Providers\InfoManNewsProvider.cs" />
+    <Compile Include="Providers\InfosNewsProvider.cs" />
+    <Compile Include="Providers\Models\News.cs" />
+    <Compile Include="Providers\SoftUniNewsProvider.cs" />
     <Compile Include="ViewModels\Account\AccountViewModels.cs" />
     <Compile Include="ViewModels\Books\BookTypeViewModel.cs" />
     <Compile Include="ViewModels\Books\BookViewModel.cs" />
@@ -320,11 +329,12 @@
     <Content Include="Views\Shared\DisplayTemplates\BookViewModel.cshtml" />
     <Content Include="Views\Books\Details.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\BookTypeViewModel.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\News.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\News\" />
     <Folder Include="Views\ShopingCart\" />
   </ItemGroup>
   <ItemGroup>

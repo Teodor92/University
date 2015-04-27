@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SimpleBookStore.Web.Mvc.Providers.Models.News>
+@{
+    ViewBag.Title = "Новини";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Прочит в сайта</th>
+            <th>Заглавие</th>
+            <th>Линк</th>
+        </tr>
+    </thead>
+    <tbody>
+        @Html.DisplayFor(x => x)
+    </tbody>
+</table>
