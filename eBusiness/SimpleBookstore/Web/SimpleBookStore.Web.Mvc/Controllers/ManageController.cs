@@ -6,12 +6,12 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using SimpleBookStore.Web.Mvc.Models;
 
 namespace SimpleBookStore.Web.Mvc.Controllers
 {
     using SimpleBookStore.Data;
     using SimpleBookStore.Data.Models;
+    using SimpleBookStore.Web.Mvc.ViewModels.Manage;
 
     [Authorize]
     public class ManageController : BaseController

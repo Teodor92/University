@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace SimpleBookStore.Web.Mvc.Models
+﻿namespace SimpleBookStore.Web.Mvc.ViewModels.Account
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class ExternalLoginConfirmationViewModel
     {
         [Required]

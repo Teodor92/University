@@ -1,6 +1,33 @@
-﻿@{
+﻿@model SimpleBookStore.Web.Mvc.ViewModels.Books.IndexViewModel
+
+@{
     ViewBag.Title = "Книги";
 }
 
-<h2>@ViewBag.Title</h2>
+<section class="col-md-3">
+    <h2>
+        Катеогрии
+    </h2>
+    <ul>
+        @Html.DisplayFor(x => x.BookTypes)
+    </ul>
+</section>
+<section class="col-md-9">
+    <h2>@ViewBag.Title</h2>
 
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr class="">
+                <th>Книга №</th>
+                <th>Тип</th>
+                <th>Заглавие</th>
+                <th>Автор</th>
+                <th>Цена</th>
+                <th>Детаили</th>
+            </tr>
+        </thead>
+        <tbody>
+            @Html.DisplayFor(x => x.Books)
+        </tbody>
+    </table>
+</section>

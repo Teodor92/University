@@ -1,0 +1,10 @@
+﻿@model SimpleBookStore.Web.Mvc.ViewModels.Books.BookViewModel
+
+<tr>
+    <td>@Html.DisplayFor(x => x.BookId)</td>
+    <td>@Html.DisplayFor(x => x.Type)</td>
+    <td>@Html.DisplayFor(x => x.Title)</td>
+    <td>@Html.DisplayFor(x => x.Author)</td>
+    <td>@Html.DisplayFor(x => x.Price)</td>
+    <td>@Html.ActionLink("Детайли", "Details", "Books", new { id = Model.Id }, null)</td>
+</tr>

@@ -13,7 +13,7 @@
     using SimpleBookStore.Common;
     using SimpleBookStore.Data;
     using SimpleBookStore.Data.Models;
-    using SimpleBookStore.Web.Mvc.Models;
+    using SimpleBookStore.Web.Mvc.ViewModels.Account;
 
     [Authorize]
     public class AccountController : BaseController
