@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{71BB35CA-FB11-4B92-9C6A-21D1013EC21A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookStore.Common", "SimpleBookStore.Common\SimpleBookStore.Common.csproj", "{929E0BC9-F05E-4B9D-985B-A72A846116E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{31AD1703-CE5E-4569-B7B6-7084666B7B24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookStore.Web.Common", "Web\SimpleBookStore.Web.Common\SimpleBookStore.Web.Common.csproj", "{27317372-F221-4142-8827-3CFA227CC35E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookStore.Data", "Data\SimpleBookStore.Data\SimpleBookStore.Data.csproj", "{BDE3996B-2436-4434-9FA3-4F6C84483290}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookStore.Data.Contracts", "Data\SimpleBookStore.Data.Contracts\SimpleBookStore.Data.Contracts.csproj", "{279C0BF3-B1A6-41D3-83AA-5FFABDC75CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookStore.Data.Models", "Data\SimpleBookStore.Data.Models\SimpleBookStore.Data.Models.csproj", "{F68395D4-1CEA-4696-945E-DA48ADE9080A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookStore.Web.WebForms", "Web\SimpleBookStore.Web.WebForms\SimpleBookStore.Web.WebForms.csproj", "{52CDBD72-A901-4DAA-AE8C-B37CA012E640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookStore.Web.Mvc", "Web\SimpleBookStore.Web.Mvc\SimpleBookStore.Web.Mvc.csproj", "{C70F7CB8-A523-420E-AF01-03B470FC3478}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{E4C5E3DD-FC1D-49D2-B0C1-A71464E80BF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookSotre.Tools.Migrator", "SimpleBookSotre.Tools.Migrator\SimpleBookSotre.Tools.Migrator.csproj", "{00CBA0BB-3E8E-4B36-8F64-2FB08342C859}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{929E0BC9-F05E-4B9D-985B-A72A846116E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929E0BC9-F05E-4B9D-985B-A72A846116E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929E0BC9-F05E-4B9D-985B-A72A846116E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929E0BC9-F05E-4B9D-985B-A72A846116E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27317372-F221-4142-8827-3CFA227CC35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27317372-F221-4142-8827-3CFA227CC35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27317372-F221-4142-8827-3CFA227CC35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27317372-F221-4142-8827-3CFA227CC35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE3996B-2436-4434-9FA3-4F6C84483290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE3996B-2436-4434-9FA3-4F6C84483290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE3996B-2436-4434-9FA3-4F6C84483290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE3996B-2436-4434-9FA3-4F6C84483290}.Release|Any CPU.Build.0 = Release|Any CPU
+		{279C0BF3-B1A6-41D3-83AA-5FFABDC75CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279C0BF3-B1A6-41D3-83AA-5FFABDC75CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279C0BF3-B1A6-41D3-83AA-5FFABDC75CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279C0BF3-B1A6-41D3-83AA-5FFABDC75CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F68395D4-1CEA-4696-945E-DA48ADE9080A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68395D4-1CEA-4696-945E-DA48ADE9080A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68395D4-1CEA-4696-945E-DA48ADE9080A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68395D4-1CEA-4696-945E-DA48ADE9080A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CDBD72-A901-4DAA-AE8C-B37CA012E640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CDBD72-A901-4DAA-AE8C-B37CA012E640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CDBD72-A901-4DAA-AE8C-B37CA012E640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CDBD72-A901-4DAA-AE8C-B37CA012E640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C70F7CB8-A523-420E-AF01-03B470FC3478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C70F7CB8-A523-420E-AF01-03B470FC3478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C70F7CB8-A523-420E-AF01-03B470FC3478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C70F7CB8-A523-420E-AF01-03B470FC3478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00CBA0BB-3E8E-4B36-8F64-2FB08342C859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00CBA0BB-3E8E-4B36-8F64-2FB08342C859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00CBA0BB-3E8E-4B36-8F64-2FB08342C859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00CBA0BB-3E8E-4B36-8F64-2FB08342C859}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27317372-F221-4142-8827-3CFA227CC35E} = {71BB35CA-FB11-4B92-9C6A-21D1013EC21A}
+		{BDE3996B-2436-4434-9FA3-4F6C84483290} = {31AD1703-CE5E-4569-B7B6-7084666B7B24}
+		{279C0BF3-B1A6-41D3-83AA-5FFABDC75CED} = {31AD1703-CE5E-4569-B7B6-7084666B7B24}
+		{F68395D4-1CEA-4696-945E-DA48ADE9080A} = {31AD1703-CE5E-4569-B7B6-7084666B7B24}
+		{52CDBD72-A901-4DAA-AE8C-B37CA012E640} = {71BB35CA-FB11-4B92-9C6A-21D1013EC21A}
+		{C70F7CB8-A523-420E-AF01-03B470FC3478} = {71BB35CA-FB11-4B92-9C6A-21D1013EC21A}
+		{00CBA0BB-3E8E-4B36-8F64-2FB08342C859} = {E4C5E3DD-FC1D-49D2-B0C1-A71464E80BF8}
+	EndGlobalSection
+EndGlobal
