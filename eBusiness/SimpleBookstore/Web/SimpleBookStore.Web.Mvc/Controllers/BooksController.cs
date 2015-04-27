@@ -19,22 +19,36 @@
         {
         }
 
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var bookViewModels = this.Data.Books
-                .All()
-                .Select(BookViewModel.ViewModel)
-                .ToList();
-
             var bookTypesViewModels = this.Data.BookTypes
                 .All()
                 .Select(BookTypeViewModel.ViewModel)
                 .ToList();
 
+            var booksRaw = this.Data.Books
+                .All();
+
+            if (id.HasValue)
+            {
+                booksRaw = booksRaw.Where(x => x.TypeId == id);
+
+                var bookTypeViewModel = bookTypesViewModels.FirstOrDefault(x => x.Id == id);
+
+                if (bookTypeViewModel != null)
+                {
+                    bookTypeViewModel.IsSelected = true;
+                }
+            }
+
+            var booksViewModels = booksRaw
+                .Select(BookViewModel.ViewModel)
+                .ToList();
+
             var viewModel = new IndexViewModel()
             {
                 BookTypes = bookTypesViewModels,
-                Books = bookViewModels
+                Books = booksViewModels
             };
 
             return this.View(viewModel);
