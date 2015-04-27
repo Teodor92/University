@@ -1,15 +1,16 @@
 ﻿namespace SimpleBookStore.Common
 {
     using System.Collections.Generic;
+    using System.Net;
     using System.Net.Mail;
     using System.Text;
 
     public sealed class MailSender
     {
         // TODO: Extract user, address and password as app.config settings
-        private const string SendFrom = "";
-        private const string SendFromName = "";
-        private const string Password = "__YOUR_PASSWORD_HERE__";
+        private const string SendFrom = "unwefakemail@gmail.com";
+        private const string SendFromName = "unwefakemail@gmail.com";
+        private const string Password = "123456qwerty1";
 
         private const string ServerAddress = "smtp.gmail.com";
         private const int ServerPort = 587;
@@ -21,14 +22,13 @@
 
         private MailSender()
         {
-            //// this.mailClient = new SmtpClient
-            //// {
-            ////     Credentials = new NetworkCredential(SendFrom, Password),
-            ////     Port = ServerPort,
-            ////     Host = ServerAddress,
-            ////     EnableSsl = true,
-            //// };
-            this.mailClient = new SmtpClient { DeliveryMethod = SmtpDeliveryMethod.PickupDirectoryFromIis };
+            this.mailClient = new SmtpClient
+            {
+                Credentials = new NetworkCredential(SendFrom, Password),
+                Port = ServerPort,
+                Host = ServerAddress,
+                EnableSsl = true,
+            };
         }
 
         public static MailSender Instance
@@ -43,7 +43,7 @@
                         {
                             instance = new MailSender();
                         }
-                    }    
+                    }
                 }
 
                 return instance;

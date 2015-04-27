@@ -2,6 +2,7 @@
 {
     using System.Web.Mvc;
 
+    using SimpleBookStore.Common;
     using SimpleBookStore.Data;
     using SimpleBookStore.Data.Models;
 
@@ -19,6 +20,8 @@
 
         public ActionResult Index()
         {
+            ////MailSender.Instance.SendMail("teodor.ivanov92@gmail.com", "test", "test");
+
             return View();
         }
 
