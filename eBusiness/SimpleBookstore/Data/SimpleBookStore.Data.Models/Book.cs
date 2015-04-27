@@ -19,7 +19,7 @@
 
         public int TypeId { get; set; }
 
-        public BookType Type { get; set; }
+        public virtual BookType Type { get; set; }
 
         public string Title { get; set; }
 
