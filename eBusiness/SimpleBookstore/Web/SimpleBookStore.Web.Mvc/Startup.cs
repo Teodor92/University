@@ -8,7 +8,7 @@ namespace SimpleBookStore.Web.Mvc
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+            this.ConfigureAuth(app);
         }
     }
 }

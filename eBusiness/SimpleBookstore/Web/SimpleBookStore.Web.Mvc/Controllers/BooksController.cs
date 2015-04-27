@@ -2,7 +2,9 @@
 {
     using System.Linq;
     using System.Web.Mvc;
+    using System.Web.Routing;
 
+    using SimpleBookStore.Common;
     using SimpleBookStore.Data;
     using SimpleBookStore.Data.Models;
     using SimpleBookStore.Web.Mvc.ViewModels.Books;
@@ -19,6 +21,7 @@
         {
         }
 
+        [HttpGet]
         public ActionResult Index(int? id)
         {
             var bookTypesViewModels = this.Data.BookTypes
@@ -54,9 +57,22 @@
             return this.View(viewModel);
         }
 
-        public ActionResult Details()
+        [HttpGet]
+        public ActionResult Details(int? id)
         {
-            return this.View();
+            if (id.HasValue)
+            {
+                var bookViewModel = this.Data.Books
+                    .All()
+                    .Where(x => x.Id == id)
+                    .Select(BookViewModel.ViewModel)
+                    .FirstOrDefault();
+
+                return this.View(bookViewModel);
+            }
+
+            this.TempData[GlobalConstants.DangerMessage] = "Няма такава книга!";
+            return this.RedirectToAction("Index", "Books", new { area = string.Empty });
         }
     }
 }

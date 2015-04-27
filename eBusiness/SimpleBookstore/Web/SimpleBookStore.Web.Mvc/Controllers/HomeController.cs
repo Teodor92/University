@@ -5,6 +5,7 @@
     using SimpleBookStore.Common;
     using SimpleBookStore.Data;
     using SimpleBookStore.Data.Models;
+    using SimpleBookStore.Web.Mvc.ViewModels.Home;
 
     public class HomeController : BaseController
     {
@@ -18,6 +19,7 @@
         {
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
             ////MailSender.Instance.SendMail("teodor.ivanov92@gmail.com", "test", "test");
@@ -25,11 +27,22 @@
             return View();
         }
 
+        [HttpGet]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            var viewModel = new ContactUsViewModel();
+            return View(viewModel);
+        }
 
-            return View();
+        [HttpPost]
+        public ActionResult Contact(ContactUsViewModel viewModel)
+        {
+            if (this.ModelState.IsValid)
+            {
+                // TODO: Send mail
+            }
+
+            return View(viewModel);
         }
     }
 }

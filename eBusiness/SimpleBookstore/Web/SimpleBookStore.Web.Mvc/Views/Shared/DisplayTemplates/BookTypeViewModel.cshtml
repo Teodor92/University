@@ -1,3 +1,3 @@
 ﻿@model SimpleBookStore.Web.Mvc.ViewModels.Books.BookTypeViewModel
 
-<li class="list-group-item @(Model.IsSelected ? "list-group-item-success" : "")">@Html.ActionLink(Model.Name, "Index", "Books", new { id = Model.Id }, null)</li>
+<li class="list-group-item @(Model.IsSelected ? "list-group-item-success" : string.Empty)">@Html.ActionLink(Model.Name, "Index", "Books", new { id = Model.Id }, null)</li>

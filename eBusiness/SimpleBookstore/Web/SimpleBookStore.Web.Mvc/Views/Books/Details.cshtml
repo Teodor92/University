@@ -1,2 +1,32 @@
-﻿@{
+﻿@model SimpleBookStore.Web.Mvc.ViewModels.Books.BookViewModel
+
+@{
+    ViewBag.Title = Model.Title;
 }
+
+<h2>@ViewBag.Title</h2>
+<div class="well well-lg">
+    <div>
+        <span>@Html.LabelFor(x => x.BookId): </span>
+        @Html.DisplayFor(x => x.BookId)
+    </div>
+    <div>
+        <img src="@Model.ImagePath" class="img-responsive"/>
+    </div>
+    <div>
+        <span>@Html.LabelFor(x => x.Title): </span>
+        @Html.DisplayFor(x => x.Title)
+    </div>
+    <div>
+        <span>@Html.LabelFor(x => x.Author): </span>
+        @Html.DisplayFor(x => x.Author)
+    </div>
+    <div>
+        <span>@Html.LabelFor(x => x.Description): </span>
+        @Html.DisplayFor(x => x.Description)
+    </div>
+    <div>
+        <span>@Html.LabelFor(x => x.Price): </span>
+        @Html.DisplayFor(x => x.Price)
+    </div>
+</div>
