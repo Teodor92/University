@@ -207,6 +207,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Providers\BtvNewsProvider.cs" />
     <Compile Include="Providers\Common\BaseNewsProvider.cs" />
     <Compile Include="Providers\Contracts\INewsProvider.cs" />
     <Compile Include="Providers\InfoManNewsProvider.cs" />
@@ -215,12 +216,15 @@
     <Compile Include="Providers\SoftUniNewsProvider.cs" />
     <Compile Include="ViewModels\Account\AccountViewModels.cs" />
     <Compile Include="ViewModels\Books\BookTypeViewModel.cs" />
-    <Compile Include="ViewModels\Books\BookViewModel.cs" />
+    <Compile Include="ViewModels\Books\FullBookViewModel.cs" />
+    <Compile Include="ViewModels\Books\ShortBookViewModel.cs" />
     <Compile Include="ViewModels\Books\IndexViewModel.cs" />
     <Compile Include="ViewModels\Home\ContactUsViewModel.cs" />
     <Compile Include="ViewModels\Manage\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ShopingCart\IndexViewModel.cs" />
+    <Compile Include="ViewModels\ShopingCart\ShopingCartItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -326,16 +330,18 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\BookViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ShortBookViewModel.cshtml" />
     <Content Include="Views\Books\Details.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\BookTypeViewModel.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\News.cshtml" />
+    <Content Include="Views\ShopingCart\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\FullBookViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ShopingCartItemViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\ShopingCart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -1,0 +1,27 @@
+﻿@model SimpleBookStore.Web.Mvc.ViewModels.Books.FullBookViewModel
+
+<div class="col-md-4">
+    <div>
+        <span>@Html.LabelFor(x => x.BookId): </span>
+        @Html.DisplayFor(x => x.BookId)
+    </div>
+    <div>
+        <img src="@Model.ImagePath" class="img-responsive" />
+    </div>
+    <div>
+        <span>@Html.LabelFor(x => x.Title): </span>
+        @Html.DisplayFor(x => x.Title)
+    </div>
+    <div>
+        <span>@Html.LabelFor(x => x.Price): </span>
+        @Html.DisplayFor(x => x.Price)
+    </div>
+    <div>
+        <span>@Html.LabelFor(x => x.Quantity): </span>
+        @Html.DisplayFor(x => x.Quantity)
+    </div>
+    <div>
+        <span>@Html.LabelFor(x => x.Total): </span>
+        @Html.DisplayFor(x => x.Total)
+    </div>
+</div>

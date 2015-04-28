@@ -28,7 +28,8 @@
         {
             var providers = new List<INewsProvider>
             {
-                new SoftUniNewsProvider(),
+                new BtvNewsProvider()
+                ////new SoftUniNewsProvider(),
                 ////new InfoManNewsProvider(),
                 ////new InfosNewsProvider()
             };

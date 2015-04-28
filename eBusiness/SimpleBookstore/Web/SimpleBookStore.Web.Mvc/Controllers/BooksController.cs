@@ -45,7 +45,7 @@
             }
 
             var booksViewModels = booksRaw
-                .Select(BookViewModel.ViewModel)
+                .Select(ShortBookViewModel.ViewModel)
                 .ToList();
 
             var viewModel = new IndexViewModel()
@@ -65,7 +65,7 @@
                 var bookViewModel = this.Data.Books
                     .All()
                     .Where(x => x.Id == id)
-                    .Select(BookViewModel.ViewModel)
+                    .Select(FullBookViewModel.ViewModel)
                     .FirstOrDefault();
 
                 return this.View(bookViewModel);

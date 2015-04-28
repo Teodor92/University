@@ -1,0 +1,12 @@
+﻿@model SimpleBookStore.Web.Mvc.ViewModels.ShopingCart.IndexViewModel
+@{
+    ViewBag.Title = "Количка";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<section class="well well-lg clearfix">
+    @Html.DisplayFor(x => x.ShopingCartItems)
+</section>
+
+<strong><span>@Html.LabelFor(x => x.TotalSum): </span>@Html.DisplayFor(x => x.TotalSum)</strong>

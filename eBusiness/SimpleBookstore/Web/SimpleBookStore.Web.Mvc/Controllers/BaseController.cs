@@ -22,12 +22,12 @@
         public BaseController(ISbsData data, User profile)
             : this(data)
         {
-            this.CurrentUser = profile;
+            this.UserProfile = profile;
         }
 
         protected ISbsData Data { get; set; }
 
-        protected User CurrentUser { get; set; }
+        protected User UserProfile { get; set; }
 
         protected internal RedirectToRouteResult RedirectToAction<TController>(Expression<Action<TController>> expression)
             where TController : Controller
@@ -44,7 +44,7 @@
         protected override IAsyncResult BeginExecute(RequestContext requestContext, AsyncCallback callback, object state)
         {
             // Work with data before BeginExecute to prevent "NotSupportedException: A second operation started on this context before a previous asynchronous operation completed."
-            this.CurrentUser = this.Data.Users.GetByUsername(requestContext.HttpContext.User.Identity.Name);
+            this.UserProfile = this.Data.Users.GetByUsername(requestContext.HttpContext.User.Identity.Name);
 
             // Calling BeginExecute before PrepareSystemMessages for the TempData to has values
             var result = base.BeginExecute(requestContext, callback, state);
