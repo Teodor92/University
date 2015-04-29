@@ -2,7 +2,6 @@
 {
     using System.Linq;
     using System.Web.Mvc;
-    using System.Web.Routing;
 
     using SimpleBookStore.Common;
     using SimpleBookStore.Data;
@@ -73,6 +72,48 @@
 
             this.TempData[GlobalConstants.DangerMessage] = "Няма такава книга!";
             return this.RedirectToAction("Index", "Books", new { area = string.Empty });
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddToCart(FullBookViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var bookModel = this.Data.Books.GetById(viewModel.Id);
+
+                if (bookModel != null)
+                {
+                    var bookHasEnoughQuantityInStorage = viewModel.QuantityToAddToCart <= bookModel.Quantity;
+
+                    if (!bookHasEnoughQuantityInStorage)
+                    {
+                        this.TempData[GlobalConstants.WarningMessage] = "Няма налично количество";
+                        return this.RedirectToAction("Details", "Books", new { id = viewModel.Id });
+                    }
+
+                    bookModel.Quantity -= viewModel.QuantityToAddToCart;
+                    var cartModel = new ShopingCartItem
+                    {
+                        BookId = viewModel.Id,
+                        UserId = this.UserProfile.Id,
+                        OrderId = "test test"
+                    };
+                    this.Data.ShopingCart.Add(cartModel);
+                    this.Data.SaveChanges();
+
+                    var successMessage = string.Format("Успешно добавихте {0} артикула в количката си.", viewModel.QuantityToAddToCart);
+                    this.TempData[GlobalConstants.SuccessMessage] = successMessage;
+                    return this.RedirectToAction("Index", "Books");
+                }
+
+                this.TempData[GlobalConstants.DangerMessage] = "Няма такава книга";
+                return this.RedirectToAction("Index", "Books");
+            }
+
+            this.TempData[GlobalConstants.DangerMessage] = "Невалидно количество";
+            return this.RedirectToAction("Details", "Books", new { id = viewModel.Id });
         }
     }
 }

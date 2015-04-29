@@ -1,4 +1,5 @@
-﻿@model SimpleBookStore.Web.Mvc.ViewModels.Books.FullBookViewModel
+﻿@using SimpleBookStore.Web.Common.Extensions
+@model SimpleBookStore.Web.Mvc.ViewModels.Books.FullBookViewModel
 
 @{
     ViewBag.Title = Model.Title;
@@ -6,27 +7,48 @@
 
 <h2>@ViewBag.Title</h2>
 <div class="well well-lg">
-    <div>
-        <span>@Html.LabelFor(x => x.BookId): </span>
-        @Html.DisplayFor(x => x.BookId)
-    </div>
-    <div>
-        <img src="@Model.ImagePath" class="img-responsive"/>
-    </div>
-    <div>
-        <span>@Html.LabelFor(x => x.Title): </span>
-        @Html.DisplayFor(x => x.Title)
-    </div>
-    <div>
-        <span>@Html.LabelFor(x => x.Author): </span>
-        @Html.DisplayFor(x => x.Author)
-    </div>
-    <div>
-        <span>@Html.LabelFor(x => x.Description): </span>
-        @Html.DisplayFor(x => x.Description)
-    </div>
-    <div>
-        <span>@Html.LabelFor(x => x.Price): </span>
-        @Html.DisplayFor(x => x.Price)
-    </div>
+    @using (Html.BeginForm("AddToCart", "Books", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.Id)
+        @Html.ValidationSummary()
+        @Html.AntiForgeryToken()
+
+        <div>
+            <span>@Html.LabelFor(x => x.BookId): </span>
+            @Html.DisplayFor(x => x.BookId)
+        </div>
+        <div>
+            <img src="@Model.ImagePath" class="img-responsive" />
+        </div>
+        <div>
+            <span>@Html.LabelFor(x => x.Title): </span>
+            @Html.DisplayFor(x => x.Title)
+        </div>
+        <div>
+            <span>@Html.LabelFor(x => x.Author): </span>
+            @Html.DisplayFor(x => x.Author)
+        </div>
+        <div>
+            <span>@Html.LabelFor(x => x.Description): </span>
+            @Html.DisplayFor(x => x.Description)
+        </div>
+        <div>
+            <span>@Html.LabelFor(x => x.Price): </span>
+            @Html.DisplayFor(x => x.Price)
+        </div>
+        <div>
+            <span>@Html.LabelFor(x => x.Quantity): </span>
+            @Html.DisplayFor(x => x.Quantity)
+        </div>
+
+        if (this.User.IsLoggedIn())
+        {
+            <div>
+                <span>@Html.LabelFor(x => x.QuantityToAddToCart): </span>
+                @Html.EditorFor(x => x.QuantityToAddToCart)
+            </div>
+
+            <input type="submit" class="btn btn-success" value="Добави в кошницата" />
+        }
+    }
 </div>

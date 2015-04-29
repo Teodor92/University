@@ -35,7 +35,7 @@ namespace SimpleBookStore.Web.Mvc.ViewModels.Books
         [Display(Name = "Описание")]
         public string Description { get; set; }
 
-        [Display(Name = "Количество")]
+        [Display(Name = "Количество в наличност")]
         public int Quantity { get; set; }
 
         [Display(Name = "В разпродажба")]
@@ -47,5 +47,9 @@ namespace SimpleBookStore.Web.Mvc.ViewModels.Books
         {
             get { return this.Price * this.Quantity; }
         }
+
+        [Display(Name = "Количество")]
+        [Range(0, int.MaxValue, ErrorMessage = "Моля въвдете положително число")]
+        public int QuantityToAddToCart { get; set; }
     }
 }
