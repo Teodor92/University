@@ -1,0 +1,90 @@
+﻿
+A.epay-button {
+    border: solid 1px #FFF;
+    background-color: #168;
+    padding: 6px;
+    color: #FFF;
+    background-image: none;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+    A.epay-button:hover {
+        border: solid 1px #ABC;
+        background-color: #179;
+        padding: 6px;
+        color: #FFF;
+        background-image: none;
+        font-weight: normal;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+A.epay {
+    text-decoration: none;
+    border-bottom: dotted 1px #168;
+    color: #168;
+    font-weight: bold;
+}
+
+    A.epay:hover {
+        text-decoration: none;
+        border-bottom: solid 1px #179;
+        color: #179;
+        font-weight: bold;
+    }
+
+TABLE.epay-view {
+    white-space: nowrap;
+    background-color: #CCC;
+}
+
+/********** VIEWES **********************************************************/
+TD.epay-view {
+    width: 100%;
+    text-align: center;
+    background-color: #DDD;
+}
+
+TD.epay-view-header {
+    background-color: #168;
+    color: #FFF;
+    height: 30px;
+}
+
+TD.epay-view-name {
+    width: 25%;
+    text-align: right;
+    background-color: #E9E9F9;
+    border-bottom: none;
+    height: 30px;
+}
+
+TD.epay-view-value {
+    width: 75%;
+    text-align: left;
+    background-color: #E9E9F9;
+    border-bottom: none;
+    white-space: normal;
+}
+
+INPUT.epay-button {
+    border: solid 1px #FFF;
+    background-color: #168;
+    padding: 4px;
+    color: #FFF;
+    background-image: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+    INPUT.epay-button:hover {
+        border: solid 1px #ABC;
+        background-color: #179;
+        padding: 4px;
+        color: #FFF;
+        background-image: none;
+        padding-left: 20px;
+        padding-right: 20px;
+    }

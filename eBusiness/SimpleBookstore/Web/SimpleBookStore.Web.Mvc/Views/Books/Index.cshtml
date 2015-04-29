@@ -1,12 +1,12 @@
 ﻿@model SimpleBookStore.Web.Mvc.ViewModels.Books.IndexViewModel
-
+@using Resources = Resources.Books.Views.Index;
 @{
-    ViewBag.Title = "Книги";
+    ViewBag.Title = Resources.Books_Page_Title;
 }
 
 <section class="col-md-3">
     <h2>
-        Катеогрии
+        @Resources.Categories_Section_Title
     </h2>
     <ul class="list-group">
         <li class="list-group-item"><a href="/Books/">All</a></li>
@@ -19,12 +19,12 @@
     <table class="table table-bordered table-hover table-striped">
         <thead>
             <tr>
-                <th>Книга №</th>
-                <th>Тип</th>
-                <th>Заглавие</th>
-                <th>Автор</th>
-                <th>Цена</th>
-                <th>Детаили</th>
+                <th>@Resources.Book_Number</th>
+                <th>@Resources.Type</th>
+                <th>@Resources.Title</th>
+                <th>@Resources.Author</th>
+                <th>@Resources.Price</th>
+                <th>@Resources.Details</th>
             </tr>
         </thead>
         <tbody>

@@ -3,6 +3,10 @@
     ViewBag.Title = "Количка";
 }
 
+@section styles {
+    @Styles.Render("~/Content/epay/epay-form-style.css")
+}
+
 <h2>@ViewBag.Title</h2>
 
 <section class="well well-lg clearfix">
@@ -10,3 +14,33 @@
 </section>
 
 <strong><span>@Html.LabelFor(x => x.TotalSum): </span>@Html.DisplayFor(x => x.TotalSum)</strong>
+
+<form action="https://www.epay.bg/" method="post">
+    <table class="epay-view table table-bordered" cellspacing="1" cellpadding="4" width="350">
+        <tr>
+            <td class="epay-view-header" align="center">Описание</td>
+            <td class="epay-view-header" align="center">Сума</td>
+        </tr>
+        <tr>
+            <td class="epay-view-value"><b>Книги</b></td>
+            <td class="epay-view-name">@Model.TotalSum BGN</td>
+        </tr>
+        <tr>
+            <td colspan="2" class=epay-view-name>
+                <input class="epay-button" type="submit" name="BUTTON:EPAYNOW" value="Плащане on-line">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="epay-view-name" style="white-space: normal; font-size: 10">
+                Плащането се осъществява чрез <a class=epay href="https://www.epay.bg/">ePay.bg</a> - Интернет системата за плащане с банкови карти и микросметки
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="PAGE" value="paylogin">
+    <input type="hidden" name="MIN" value="7723054336">
+    <input type="hidden" name="INVOICE" value="">
+    <input type="hidden" name="TOTAL" value="@Model.TotalSum">
+    <input type="hidden" name="DESCR" value="Книги">
+    <input type="hidden" name="URL_OK" value="https://www.epay.bg/?p=thanks">
+    <input type="hidden" name="URL_CANCEL" value="https://www.epay.bg/?p=cancel">
+</form>

@@ -1,7 +1,9 @@
 ﻿namespace SimpleBookStore.Web.Mvc.Controllers
 {
     using System;
+    using System.Globalization;
     using System.Linq.Expressions;
+    using System.Threading;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
@@ -124,6 +126,32 @@
             }
 
             return messages;
+        }
+
+        private void SetUserUiCulture(RequestContext requestContext)
+        {
+            this.SetUiCultureFromCookie(requestContext);
+        }
+
+        private void SetUiCultureFromCookie(RequestContext requestContext)
+        {
+            if (requestContext.HttpContext.Request.Cookies[GlobalConstants.LanguageCookieName] != null &&
+                requestContext.HttpContext.Request.Cookies[GlobalConstants.LanguageCookieName].Value == GlobalConstants.EnglishCultureCookieValue)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(GlobalConstants.EnglishCultureInfoName);
+                this.SetLanguageCookie(requestContext, GlobalConstants.EnglishCultureCookieValue);
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(GlobalConstants.BulgarianCultureInfoName);
+                this.SetLanguageCookie(requestContext, GlobalConstants.BulgarianCultureCookieValue);
+            }
+        }
+
+        private void SetLanguageCookie(RequestContext requestContext, string language)
+        {
+            var languageCookie = new HttpCookie(GlobalConstants.LanguageCookieName, language);
+            requestContext.HttpContext.Response.SetCookie(languageCookie);
         }
     }
 }
