@@ -1,0 +1,33 @@
+﻿@model SimpleBookStore.Web.Mvc.ViewModels.Home.SearchViewModel
+
+@{
+    ViewBag.Title = "Търсене за: " + Model.QueryString;
+}
+
+
+<h2>@ViewBag.Title</h2>
+
+@if (Model.Results.Any())
+{
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Книга №</th>
+                <th>Тип</th>
+                <th>Заглавие</th>
+                <th>Автор</th>
+                <th>Цена</th>
+                <th>Детаили</th>
+            </tr>
+        </thead>
+        <tbody>
+            @Html.DisplayFor(x => x.Results)
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="well well-sm">
+        <h3>Няма резултати</h3>
+    </div>
+}

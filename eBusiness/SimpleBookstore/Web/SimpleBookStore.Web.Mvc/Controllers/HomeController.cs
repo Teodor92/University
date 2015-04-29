@@ -1,5 +1,6 @@
 ﻿namespace SimpleBookStore.Web.Mvc.Controllers
 {
+    using System.Linq;
     using System.Threading.Tasks;
     using System.Web.Mvc;
     using System.Web.Routing;
@@ -7,6 +8,7 @@
     using SimpleBookStore.Common;
     using SimpleBookStore.Data;
     using SimpleBookStore.Data.Models;
+    using SimpleBookStore.Web.Mvc.ViewModels.Books;
     using SimpleBookStore.Web.Mvc.ViewModels.Home;
 
     public class HomeController : BaseController
@@ -47,7 +49,27 @@
                 return this.RedirectToAction("Contact", "Home", new { area = string.Empty });
             }
 
-            return View(viewModel);
+            return this.View(viewModel);
+        }
+
+        [HttpGet]
+        public ActionResult Search(string queryString)
+        {
+            queryString = queryString.ToLower();
+
+            var bookViewModels = this.Data.Books
+                .All()
+                .Where(x => x.Title.ToLower().Contains(queryString))
+                .Select(ShortBookViewModel.ViewModel)
+                .ToList();
+
+            var searchViewModel = new SearchViewModel()
+            {
+                QueryString = queryString,
+                Results = bookViewModels
+            };
+
+            return this.View(searchViewModel);
         }
     }
 }

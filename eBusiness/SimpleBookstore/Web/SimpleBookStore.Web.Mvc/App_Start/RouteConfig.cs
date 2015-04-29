@@ -18,6 +18,12 @@ namespace SimpleBookStore.Web.Mvc
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Search",
+                url: "Home/Search/{queryString}",
+                defaults: new { controller = "Home", action = "Search", queryString = UrlParameter.Optional }
+            );
         }
     }
 }

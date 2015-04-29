@@ -220,6 +220,7 @@
     <Compile Include="ViewModels\Books\ShortBookViewModel.cs" />
     <Compile Include="ViewModels\Books\IndexViewModel.cs" />
     <Compile Include="ViewModels\Home\ContactUsViewModel.cs" />
+    <Compile Include="ViewModels\Home\SearchViewModel.cs" />
     <Compile Include="ViewModels\Manage\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -338,6 +339,7 @@
     <Content Include="Views\ShopingCart\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\FullBookViewModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ShopingCartItemViewModel.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

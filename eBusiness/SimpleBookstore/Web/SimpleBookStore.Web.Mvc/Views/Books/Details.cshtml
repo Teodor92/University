@@ -38,7 +38,18 @@
         </div>
         <div>
             <span>@Html.LabelFor(x => x.Quantity): </span>
-            @Html.DisplayFor(x => x.Quantity)
+            @if (Model.Quantity == 0)
+            {
+                <span class="label label-danger">@Model.Quantity артикула</span>
+            }
+            else if (Model.Quantity >= 0 && Model.Quantity <= 2)
+            {
+                <span class="label label-warning">@Model.Quantity артикула</span>
+            }
+            else
+            {
+                <span class="label label-success">@Model.Quantity артикула</span>
+            }
         </div>
 
         if (this.User.IsLoggedIn())
